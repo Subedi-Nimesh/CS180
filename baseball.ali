@@ -1,0 +1,177 @@
+V "GNAT Lib v2006"
+M P W=b
+A -gnatwu
+A -g
+A -gnato
+A -gnatwa
+A -gnat05
+A -mtune=pentium
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U baseball%b		baseball.adb		8741ee4a NE SU KU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20060531145010 9c7dd3ea
+D a-except.ads		20060531145036 7e22d533
+D a-finali.ads		20060531145016 d37ac0e9
+D a-filico.ads		20060531145016 9299732a
+D a-flteio.ads		20060531145018 3407344a
+D a-inteio.ads		20060531145018 03bc737c
+D a-ioexce.ads		20060531145018 be0900a0
+D a-stream.ads		20060531145018 34aca5be
+D a-tags.ads		20060531145020 86bbd538
+D a-tags.adb		20060531145014 aa0d61da
+D a-textio.ads		20060531145020 bc58c967
+D a-tiflio.ads		20060531145020 5d91823c
+D a-tiinio.ads		20060531145020 949a7272
+D baseball.adb		20170324040250 0ca2601b
+D interfac.ads		20060531145010 a69cad5c
+D i-cstrea.ads		20060531145024 85085d90
+D system.ads		20060531145036 38d6a6b2
+D s-crtl.ads		20060531145028 79229be5
+D s-exctab.ads		20060531145028 e14b1567
+D s-ficobl.ads		20060531145028 ed792749
+D s-finimp.ads		20060531145028 33c39bf7
+D s-finroo.ads		20060531145028 6f410d48
+D s-htable.ads		20060531145028 9598cfa4
+D s-parame.ads		20060531145028 6bd7b874
+D s-secsta.ads		20060531145028 db466d0c
+D s-soflin.ads		20060531145030 677820d8
+D s-stache.ads		20060531145030 07e06d0a
+D s-stalib.ads		20060531145030 99eda53f
+D s-stoele.ads		20060531145030 f7e9ab3e
+D s-stoele.adb		20060531145026 a397f9ca
+D s-stratt.ads		20060531145030 63715cfd
+D s-traent.ads		20060531145030 9950c76b
+D s-unstyp.ads		20060531145030 b399198a
+D s-wchcon.ads		20060531145030 a5170e96
+D s-wchstw.ads		20060531145030 6b782940
+D unchconv.ads		20060531145010 34860a55
+X 1 ada.ads
+16K9*Ada 19e8 14|1r6 1r19 1r38 11r15 29r32 41r7 46r7 49r7 52r7 55r7 58r7
+. 61r7 64r7 67r7 71r14 72r10 84r7 85r7 86r7 87r7 88r7 93r7 95r7 96r7 101r7
+. 103r7 104r7 109r7 111r7 112r7 117r7 220r4 221r4 222r4 224r15 226r4 228r14
+X 5 a-flteio.ads
+20K13*Float_Text_IO[12|47] 14|1w23 88r11 96r11 104r11 112r11
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[13|47] 14|1w42 46r11 49r11 52r11 55r11 58r11 61r11
+. 64r11 67r11
+X 11 a-textio.ads
+49K13*Text_IO 451e16 14|1w10 11r19 29r36 41r11 71r18 72r14 84r11 85r11 86r11
+. 87r11 93r11 95r11 101r11 103r11 109r11 111r11 117r11 220r8 221r8 222r8
+. 224r19 226r8 228r18
+52P9*File_Type(339R9) 14|11r27 29r44
+53n23*In_File{53E9} 14|224r27
+64I9*Count<integer>
+69I12*Positive_Count{64I9}
+74I12*Field{integer}
+93U14*Open 14|222r16
+94p7 File{52P9} 14|223r7
+95e7 Mode{53E9} 14|224r7
+96s7 Name{string} 14|225r7
+167U14*New_Line 14|86r19 93r19 101r19 109r19 117r19 221r16 226r16
+167i24 Spacing{69I12} 14|117r28 221r25
+169U14*Skip_Line 14|72r22
+169p25 File{52P9} 14|72r32
+184V13*End_Of_File{boolean} 14|71r26 228r26
+184p26 File{52P9} 14|71r38 228r38
+243U14*Put 14|84r19 85r19 87r19 95r19 103r19 111r19 220r16
+243s19 Item{string} 14|84r24 85r24 87r24 95r23 103r23 111r23 220r21
+245U14*Get_Line 14|41r19
+246p7 File{52P9} 14|42r10
+247s7 Item{string} 14|43r10
+248i7 Last{natural} 14|44r10
+X 12 a-tiflio.ads
+69U14*Put 14|88r25[5|20] 96r25[5|20] 104r25[5|20] 112r25[5|20]
+70f7 Item{float} 14|89r10[5|20] 97r10[5|20] 105r10[5|20] 113r10[5|20]
+71i7 Fore{11|74I12} 14|90r10[5|20] 98r10[5|20] 106r10[5|20] 114r10[5|20]
+72i7 Aft{11|74I12} 14|91r10[5|20] 99r10[5|20] 107r10[5|20] 115r10[5|20]
+73i7 Exp{11|74I12} 14|92r10[5|20] 100r10[5|20] 108r10[5|20] 116r10[5|20]
+X 13 a-tiinio.ads
+52U14*Get 14|46r27[6|18] 49r27[6|18] 52r27[6|18] 55r27[6|18] 58r27[6|18]
+. 61r27[6|18] 64r27[6|18] 67r27[6|18]
+53p7 File{11|52P9} 14|47r10[6|18] 50r10[6|18] 53r10[6|18] 56r10[6|18] 59r10[6|18]
+. 62r10[6|18] 65r10[6|18] 68r10[6|18]
+54i7 Item{integer} 14|48r10[6|18] 51r10[6|18] 54r10[6|18] 57r10[6|18] 60r10[6|18]
+. 63r10[6|18] 66r10[6|18] 69r10[6|18]
+X 14 baseball.adb
+7U11*Baseball 7b11 286l5 286t13
+9a4 Name{string} 231m26 280r18
+10i4 Length{integer} 85r41 232m26
+11p4 Infile{11|52P9} 71r46 223m15 228r46 230m26
+12i4 AtBats{integer} 233m26 243r22 251r22 262r22 270r22
+13i4 Singles{integer} 234m26 244r22 252r22 263r22 271r22
+14i4 Doubles{integer} 235m26 245r22 253r22 264r22 272r22
+15i4 Triples{integer} 236m26 246r22 254r22 265r22 273r22
+16i4 HomeRuns{integer} 237m26 247r22 255r22 266r22 274r22
+17i4 BB{integer} 238m26 256r22 275r22
+18i4 HBP{integer} 239m26 257r22 276r22
+19i4 SacFly{integer} 240m26 258r22 277r22
+20i4 Hits{integer} 135m10 136r27 158m10 159r29
+22f4 BA{float} 242m7 281r18
+23f4 OBP{float} 250m7 282r18
+24f4 SLG{float} 261m7 283r18
+25f4 OBS{float} 269m7 284r18
+28U14 Getdata 28b14 29=10 30<10 31<10 32<10 33<10 34<10 35<10 36<10 37<10
+. 38<10 39<10 75l8 75t15 229r7
+29p10 DataFile{11|52P9} 42r18 47r18 50r18 53r18 56r18 59r18 62r18 65r18 68r18
+. 72r40 230r10
+30s10 Players_Name{string} 43m18 231r10
+31i10 Length{integer} 44m18 232r10
+32i10 Batsmen{integer} 48m18 233r10
+33i10 Single_Run{integer} 51m18 234r10
+34i10 Double_Run{integer} 54m18 235r10
+35i10 Triple_Run{integer} 57m18 236r10
+36i10 Homerun_Run{integer} 60m18 237r10
+37i10 BB_Run{integer} 63m18 238r10
+38i10 HBP_Run{integer} 66m18 239r10
+39i10 SacFly_Run{integer} 69m18 240r10
+77U14 Result 77b14 78>10 79>10 80>10 81>10 82>10 118l8 118t14 279r7
+78s10 Name{string} 85r32 280r10
+79f10 BA{float} 89r18 281r10
+80f10 OBP{float} 97r18 282r10
+81f10 SLG{float} 105r18 283r10
+82f10 OBS{float} 113r18 284r10
+122V13 BattingAverage{float} 122b13 123>10 124>10 125>10 126>10 127>10 139l8
+. 139t22 242r13
+123i10 AtBats{integer} 132r10 136r41 243r10
+124i10 Singles{integer} 135r18 244r10
+125i10 Doubles{integer} 135r28 245r10
+126i10 Triples{integer} 135r38 246r10
+127i10 Homeruns{integer} 135r48 247r10
+130f7 Average{float} 133m10 136m10 138r14
+143V13 OnBasePercentage{float} 143b13 144>10 145>10 146>10 147>10 148>10
+. 149>10 150>10 151>10 163l8 163t24 201r20 250r14
+144i10 AtBats{integer} 155r10 159r52 202r10 251r10
+145i10 Singles{integer} 158r18 203r10 252r10
+146i10 Doubles{integer} 158r28 204r10 253r10
+147i10 Triples{integer} 158r38 205r10 254r10
+148i10 Homeruns{integer} 158r48 206r10 255r10
+149i10 BB{integer} 155r19 159r36 159r60 207r10 256r10
+150i10 HBP{integer} 155r24 159r41 159r65 208r10 257r10
+151i10 SacFly{integer} 155r30 160r13 209r10 258r10
+153f7 OBP_Score{float} 156m10 159m10 162r14
+167V13 SluggingPercentage{float} 167b13 168>10 169>10 170>10 171>10 172>10
+. 184l8 184t26 209r32 261r14
+168i10 AtBats{integer} 177r10 181r31 210r10 262r10
+169i10 Singles{integer} 180r30 211r10 263r10
+170i10 Doubles{integer} 180r44 212r10 264r10
+171i10 Triples{integer} 180r58 213r10 265r10
+172i10 Homeruns{integer} 181r13 214r10 266r10
+175f7 SLG_Score{float} 178m10 180m10 183r14
+188V13 OnBasePlusSlugging{float} 188b13 189>10 190>10 191>10 192>10 193>10
+. 194>10 195>10 196>10 216l8 216t26 269r14
+189i10 AtBats{integer} 202r22 210r22 270r10
+190i10 Singles{integer} 203r22 211r22 271r10
+191i10 Doubles{integer} 204r22 212r22 272r10
+192i10 Triples{integer} 205r22 213r22 273r10
+193i10 Homeruns{integer} 206r22 214r22 274r10
+194i10 BB{integer} 207r22 275r10
+195i10 HBP{integer} 208r22 276r10
+196i10 SacFly{integer} 209r22 277r10
+199f7 OBS_Score{float} 201m7 215r14
+

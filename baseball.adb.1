@@ -1,0 +1,272 @@
+WITH Ada.Text_IO, Ada.Float_Text_IO, Ada.Integer_Text_IO;
+------
+-- This program is created by NIMESH SUBEDI.
+-- The purpose of this program is to calculate
+-- Baseball batting statistics rate.
+------
+PROCEDURE Baseball IS
+   --Variables used in main procedure.
+   Name     : String (1 .. 32);         --for recording Name of the player.
+   Length   : Integer;
+   Infile   : Ada.Text_IO.File_Type;
+   AtBats   : Integer;                  --for recording number of Bats man.
+   Singles  : Integer;               --for recording number of Singles.
+   Doubles  : Integer;               --for recording number of Doubles.
+   Triples  : Integer;               --for recording number of Triples.
+   HomeRuns : Integer;                  --for recording number of Home runs.
+   BB       : Integer;                  --for recording number of Walks taken.
+   HBP      : Integer;                  --for recording number of Hit By Pitch.
+   SacFly   : Integer;                  --for recording number of Sacrifice Fly.
+   Hits     : Integer;                  --for recording number of Hits taken.
+
+   BA  : Float; --for recording Batting Average
+   OBP : Float; --for recording On Base Percentage
+   SLG : Float; --For recording Slugging Percentage
+   OBS : Float; --For recording On Base Plus Slugging
+
+   -- Subprogram
+   PROCEDURE Getdata (
+         DataFile     : IN OUT Ada.Text_IO.File_Type;
+         Players_Name :    OUT String;
+         Length       :    OUT Integer;
+         Batsmen      :    OUT Integer;
+         Single_Run   :    OUT Integer;
+         Double_Run   :    OUT Integer;
+         Triple_Run   :    OUT Integer;
+         Homerun_Run  :    OUT Integer;
+         BB_Run       :    OUT Integer;
+         HBP_Run      :    OUT Integer;
+         SacFly_Run   :    OUT Integer) IS
+   BEGIN
+      Ada.Text_IO.Get_Line (
+         File => Datafile,
+         Item => Players_Name,
+         Last => Length);
+
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => Batsmen);
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => Single_Run);
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => Double_Run);
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => Triple_Run);
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => Homerun_Run);
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => BB_Run);
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => HBP_Run);
+      Ada.Integer_Text_IO.Get (
+         File => Datafile,
+         Item => SacFly_Run);
+
+      Ada.Text_IO.Skip_Line(File => DataFile);
+
+   END Getdata;
+
+   --To calculate Batting Average (BA).
+
+   FUNCTION BattingAverage (
+         AtBats   : Integer;
+         Singles  : Integer;
+         Doubles  : Integer;
+         Triples  : Integer;
+         Homeruns : Integer)
+     RETURN Float IS
+
+      Average : Float;
+   BEGIN
+      IF Atbats = 0 THEN
+         Average := 0.0;
+      ELSE
+         Hits := Singles + Doubles + Triples + HomeRuns;
+         Average := Float(Hits) / Float(AtBats);
+      END IF;
+      RETURN Average;
+   END BattingAverage;
+
+   --To calculate On Base Percentage (OBP).
+
+   FUNCTION OnBasePercentage (
+         AtBats   : Integer;
+         Singles  : Integer;
+         Doubles  : Integer;
+         Triples  : Integer;
+         Homeruns : Integer;
+         BB       : Integer;
+         HBP      : Integer;
+         SacFly   : Integer)
+     RETURN Float IS
+      OBP_Score : Float;
+   BEGIN
+      IF Atbats + BB + HBP + SacFly = 0 THEN
+         OBP_Score := 0.0;
+      ELSE
+         Hits := Singles + Doubles + Triples + HomeRuns;
+         OBP_Score := Float(Hits + BB + HBP)/Float(AtBats +BB + HBP +
+            SacFly);
+      END IF;
+      RETURN OBP_Score;
+   END OnBasePercentage;
+
+   --To calculate Slugging Percentage (SLG).
+
+   FUNCTION SluggingPercentage (
+         AtBats   : Integer;
+         Singles  : Integer;
+         Doubles  : Integer;
+         Triples  : Integer;
+         Homeruns : Integer)
+     RETURN Float IS
+
+      SLG_Score : Float;
+   BEGIN
+      IF Atbats = 0 THEN
+         SLG_Score := 0.0;
+      ELSE
+         SLG_Score := Float (Singles + 2 * Doubles + 3 * Triples + 4 *
+            HomeRuns) / Float(AtBats);
+      END IF;
+      RETURN SLG_Score;
+   END SluggingPercentage;
+
+   --To calculate On Base Plus Slugging (OBS).
+
+   FUNCTION OnBasePlusSlugging (
+         AtBats   : Integer;
+         Singles  : Integer;
+         Doubles  : Integer;
+         Triples  : Integer;
+         Homeruns : Integer;
+         BB       : Integer;
+         HBP      : Integer;
+         SacFly   : Integer)
+     RETURN Float IS
+
+      OBS_Score : Float;
+   BEGIN
+      OBS_Score := OnBasePercentage(
+         AtBats   => AtBats,
+         Singles  => Singles,
+         Doubles  => Doubles,
+         Triples  => Triples,
+         Homeruns => Homeruns,
+         BB       => BB,
+         HBP      => HBP,
+         SacFly   => SacFly) + SluggingPercentage (
+         AtBats   => AtBats,
+         Singles  => Singles,
+         Doubles  => Doubles,
+         Triples  => Triples,
+         Homeruns => Homeruns);
+      RETURN OBS_Score;
+   END OnBasePlusSlugging;
+
+   --Main Procedure Starts
+BEGIN
+   Ada.Text_IO.Put (Item => "Welcome to the Baseball Stat Program.");
+   Ada.Text_IO.New_Line(Spacing => 2);
+   Ada.Text_IO.Open (
+      File => InFile,
+      Mode => Ada.Text_IO.In_File,
+      Name => "stats.txt");
+   Ada.Text_IO.New_Line;
+
+   WHILE NOT Ada.Text_IO.End_Of_File(File => InFile) LOOP
+      Getdata (
+         DataFile     => Infile,
+         Players_Name => Name,
+         Length       => Length,
+         Batsmen      => AtBats,
+         Single_Run   => Singles,
+         Double_Run   => Doubles,
+         Triple_Run   => Triples,
+         Homerun_Run  => Homeruns,
+         BB_Run       => BB,
+         HBP_Run      => HBP,
+         SacFly_Run   => SacFly);
+
+      BA := BattingAverage (
+         AtBats   => AtBats,
+         Singles  => Singles,
+         Doubles  => Doubles,
+         Triples  => Triples,
+         Homeruns => Homeruns
+         );
+
+      OBP := OnBasePercentage (
+         AtBats   => AtBats,
+         Singles  => Singles,
+         Doubles  => Doubles,
+         Triples  => Triples,
+         Homeruns => Homeruns,
+         BB       => BB,
+         HBP      => HBP,
+         SacFly   => SacFly
+         );
+
+      SLG := SluggingPercentage(
+         AtBats   => AtBats,
+         Singles  => Singles,
+         Doubles  => Doubles,
+         Triples  => Triples,
+         Homeruns => Homeruns
+         );
+
+      OBS := OnBasePlusSlugging(
+         AtBats   => AtBats,
+         Singles  => Singles,
+         Doubles  => Doubles,
+         Triples  => Triples,
+         Homeruns => Homeruns,
+         BB       => BB,
+         HBP      => HBP,
+         SacFly   => SacFly
+         );
+
+
+      Ada.Text_IO.Put(Item => "Players : ");
+      Ada.Text_IO.Put(Item => Name (1 .. Length));
+      Ada.Text_IO.New_Line;
+
+      Ada.Text_IO.Put(Item => "Batting Average : ");
+      Ada.Float_Text_IO.Put(
+         Item => BA,
+         Fore => 0,
+         Aft  => 3,
+         Exp  => 0);
+      Ada.Text_IO.New_Line;
+
+      Ada.Text_IO.Put(Item => "On Base Percentage : ");
+      Ada.Float_Text_IO.Put(
+         Item => OBP,
+         Fore => 0,
+         Aft  => 3,
+         Exp  => 0);
+      Ada.Text_IO.New_Line;
+
+      Ada.Text_IO.Put(Item => "Slugging Percentage : ");
+      Ada.Float_Text_IO.Put(
+         Item => SLG,
+         Fore => 0,
+         Aft  => 3,
+         Exp  => 0);
+      Ada.Text_IO.New_Line;
+
+      Ada.Text_IO.Put(Item => "On Base Plus Slugging : ");
+      Ada.Float_Text_IO.Put(
+         Item => OBS,
+         Fore => 0,
+         Aft  => 3,
+         Exp  => 0);
+      Ada.Text_IO.New_Line(Spacing => 2);
+   END LOOP;
+END Baseball;

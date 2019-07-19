@@ -1,0 +1,108 @@
+
+GNAT GPL 2006 (20060522-34)
+Copyright 1992-2006, Free Software Foundation, Inc.
+
+Compiling: c:/users/nimesh/docume~1/gpa.adb (source file time stamp: 2017-02-06 18:39:28)
+
+     1. WITH Ada.Text_IO;
+     2. WITH Ada.Integer_Text_IO;
+     3. WITH Ada.Float_Text_IO;
+     4. 
+     5. PROCEDURE GPA IS
+     6.    My_Name        : String (1 .. 10);
+     7.    My_Name_Length : Integer;
+     8. 
+     9.    -----------------------------------------------
+    10.    -- This program recieves/reads scores of five class and
+    11.    -- then displays the grade point average to the screen.
+    12.    N : Integer;
+    13.    I : Integer;
+    14.    M : Integer;
+    15.    E : Integer;
+    16.    S : Integer;
+    17. 
+    18.    H : Float;
+    19.    U : Float;
+    20.    B : Float;
+    21.    D : Float;
+    22.    O : Float;
+    23. 
+    24.    P : Float;
+    25.    A : Float;
+    26.    G : Float;
+    27.    Y : Float;
+    28.    W : Float;
+    29. 
+    30. 
+    31.    -- Variables useful to help calculate the average.
+    32.    Total          : Float;
+    33.    Numberofcredit : Float;
+    34.    GPA            : Float;
+    35. 
+    36. BEGIN
+    37. 
+    38.    Ada.Text_Io.Put(Item => "Hello !!! This Program is created by Nimesh Subedi.");
+    39.    Ada.Text_Io.New_Line;
+    40.    Ada.Text_Io.Put(Item => "Inorder to calculate the Grade Point Average. ");
+    41.    Ada.Text_Io.New_Line(Spacing => 2);
+    42. 
+    43.    Ada.Text_Io.Put(Item => "Please Enter Your Name : ");
+    44.    Ada.Text_IO.Get_Line(
+    45.       Item => My_Name,
+    46.       Last => My_Name_Length);
+    47.    Ada.Text_IO.New_Line(Spacing => 2);
+    48. 
+    49.    -- Read the Grade of 5 classes
+    50.    Ada.Text_Io.Put(Item => "Please enter grade points for class 1 : ");
+    51.    Ada.Integer_Text_Io.Get(Item => N);
+    52.    Ada.Text_Io.Put(Item => "Enter credit hours for class 1 : ");
+    53.    Ada.Float_Text_IO.Get(Item => H);
+    54.    P := Float(N) * H;
+    55.    Ada.Text_Io.New_Line;
+    56. 
+    57.    Ada.Text_Io.Put(Item => "Please enter grade points for class 2 : ");
+    58.    Ada.Integer_Text_Io.Get(Item => I);
+    59.    Ada.Text_Io.Put(Item => "Enter credit hours for class 2 : ");
+    60.    Ada.Float_Text_IO.Get(Item => U);
+    61.    A := Float(I) * U;
+    62.    Ada.Text_Io.New_Line;
+    63. 
+    64.    Ada.Text_Io.Put(Item => "Please enter grade points for class 3 : ");
+    65.    Ada.Integer_Text_Io.Get(Item => M);
+    66.    Ada.Text_Io.Put(Item => "Enter credit hours for class 3 : ");
+    67.    Ada.Float_Text_IO.Get(Item => B);
+    68.    G := Float(M) * B;
+    69.    Ada.Text_Io.New_Line;
+    70. 
+    71.    Ada.Text_Io.Put(Item => "Please enter grade points for class 4 : ");
+    72.    Ada.Integer_Text_Io.Get(Item => E);
+    73.    Ada.Text_Io.Put(Item => "Enter credit hours for class 4 : ");
+    74.    Ada.Float_Text_IO.Get(Item => D);
+    75.    Y := Float(E) * D;
+    76.    Ada.Text_Io.New_Line;
+    77. 
+    78.    Ada.Text_Io.Put(Item => "Please enter grade points for class 5 : ");
+    79.    Ada.Integer_Text_Io.Get(Item => S);
+    80.    Ada.Text_Io.Put(Item => "Enter credit hours for class 5 : ");
+    81.    Ada.Float_Text_IO.Get(Item => O);
+    82.    W := Float(S) * O;
+    83.    Ada.Text_Io.New_Line;
+    84. 
+    85.    Numberofcredit := H + U + B + D + O;
+    86. 
+    87.    -- Calculate the Grade Point Averege
+    88.    Total := P + A + G + Y + W;
+    89.    GPA := Total/Numberofcredit;
+    90. 
+    91.    -- Print the Grade Point average
+    92.    Ada.Text_IO.Put(Item => My_Name (1 .. My_Name_Length));
+    93.    Ada.Text_Io.Put(Item => ", Your Grade Point Average is: ");
+    94.    Ada.Float_Text_Io.Put(
+    95.       Item => GPA,
+    96.       Aft  => 3,
+    97.       Exp  => 0);
+    98.    Ada.Text_Io.New_Line;
+    99. 
+   100. END GPA;
+
+ 100 lines: No errors

@@ -1,0 +1,101 @@
+WITH Ada.Text_Io;
+WITH Ada.Integer_Text_Io;
+WITH Ada.Float_Text_Io;
+
+PROCEDURE Date IS
+
+   -----------------------------------------------
+   -- This program changes the date format from digits to words
+   -- This program is created by NIMESH SUBEDI
+   -- Username : ns8851
+   -- Date: April 04, 2017
+
+   TYPE Monthtype IS
+         (January,
+          February,
+          March,
+          April,
+          May,
+          June,
+          July,
+          August,
+          September,
+          October,
+          November,
+          December);
+   Month : MonthType;
+
+
+   PROCEDURE OutputMonth (
+         Today : IN     MonthType) IS
+   BEGIN
+      CASE Today IS
+         WHEN 1 =>
+            Ada.Text_IO.Put_Line(Item => "January ");
+         WHEN 2 =>
+            Ada.Text_IO.Put_Line(Item => "Febuary ");
+         WHEN 3 =>
+            Ada.Text_IO.Put_Line(Item => "March ");
+         WHEN 4 =>
+            Ada.Text_IO.Put_Line(Item => "April ");
+         WHEN 5 =>
+            Ada.Text_IO.Put_Line(Item => "May ");
+         WHEN 6 =>
+            Ada.Text_Io.Put_Line(Item => "June ");
+         WHEN 7 =>
+            Ada.Text_IO.Put_Line(Item => "July ");
+         WHEN 8 =>
+            Ada.Text_IO.Put_Line(Item => "August ");
+         WHEN 9 =>
+            Ada.Text_IO.Put_Line(Item => "September ");
+         WHEN 10 =>
+            Ada.Text_IO.Put_Line(Item => "October ");
+         WHEN 11 =>
+            Ada.Text_IO.Put_Line(Item => "November ");
+         WHEN 12 =>
+            Ada.Text_Io.Put_Line(Item => "December ");
+         WHEN OTHERS =>
+            Ada.Text_Io.Put_Line(Item => "Invalid");
+      END CASE;
+   END OutputMonth;
+
+
+   TYPE Daytype IS
+         (January,
+          February,
+          March,
+          April,
+          May,
+          June,
+          July,
+          August,
+          September,
+          October,
+          November,
+          December);
+   Day : DayType;
+
+   PROCEDURE OutputDay (
+         Today : IN     DayType) IS
+   BEGIN
+      CASE Today IS
+         WHEN =>
+            Ada.Text_IO.Put_Line(Item => "Today we have class.");
+         WHEN Tuesday =>
+            Ada.Text_IO.Put_Line(Item => "Today I get to go to lab.");
+         WHEN OTHERS =>
+            Ada.Text_Io.Put_Line(Item => "So sad there is no class today.");
+      END CASE;
+   END OutputDay;
+
+
+BEGIN
+
+   Ada.Text_Io.Put(Item => "Welcome to the case demonstration program.");
+   Ada.Text_Io.New_Line(Spacing => 2);
+   Ada.Text_Io.Put(Item => "Enter Today's Date ()");
+
+
+   OutputMonth(Today => Month);
+   OutputDay(Today => Day);
+END Date;

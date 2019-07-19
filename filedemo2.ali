@@ -1,0 +1,108 @@
+V "GNAT Lib v2006"
+M P W=b
+A -gnatwu
+A -g
+A -gnato
+A -gnatwa
+A -gnat05
+A -mtune=pentium
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U filedemo2%b		filedemo2.adb		e44268a7 NE SU IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20060531145010 9c7dd3ea
+D a-except.ads		20060531145036 7e22d533
+D a-finali.ads		20060531145016 d37ac0e9
+D a-filico.ads		20060531145016 9299732a
+D a-flteio.ads		20060531145018 3407344a
+D a-inteio.ads		20060531145018 03bc737c
+D a-ioexce.ads		20060531145018 be0900a0
+D a-stream.ads		20060531145018 34aca5be
+D a-tags.ads		20060531145020 86bbd538
+D a-tags.adb		20060531145014 aa0d61da
+D a-textio.ads		20060531145020 bc58c967
+D a-tiflio.ads		20060531145020 5d91823c
+D a-tiinio.ads		20060531145020 949a7272
+D filedemo2.adb		20170204214010 6fa1e6f6
+D interfac.ads		20060531145010 a69cad5c
+D i-cstrea.ads		20060531145024 85085d90
+D system.ads		20060531145036 38d6a6b2
+D s-crtl.ads		20060531145028 79229be5
+D s-exctab.ads		20060531145028 e14b1567
+D s-ficobl.ads		20060531145028 ed792749
+D s-finimp.ads		20060531145028 33c39bf7
+D s-finroo.ads		20060531145028 6f410d48
+D s-htable.ads		20060531145028 9598cfa4
+D s-parame.ads		20060531145028 6bd7b874
+D s-secsta.ads		20060531145028 db466d0c
+D s-soflin.ads		20060531145030 677820d8
+D s-stache.ads		20060531145030 07e06d0a
+D s-stalib.ads		20060531145030 99eda53f
+D s-stoele.ads		20060531145030 f7e9ab3e
+D s-stoele.adb		20060531145026 a397f9ca
+D s-stratt.ads		20060531145030 63715cfd
+D s-traent.ads		20060531145030 9950c76b
+D s-unstyp.ads		20060531145030 b399198a
+D s-wchcon.ads		20060531145030 a5170e96
+D s-wchstw.ads		20060531145030 6b782940
+D unchconv.ads		20060531145010 34860a55
+X 1 ada.ads
+16K9*Ada 19e8 14|1r6 2r6 3r6 32r15 34r16 38r4 39r4 42r4 43r15 49r4 50r4 53r4
+. 54r4 57r4 58r4 61r4 62r4 65r4 66r4 74r4 75r14 79r4 80r4 82r4
+X 5 a-flteio.ads
+20K13*Float_Text_IO[12|47] 14|3w10 80r8
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[13|47] 14|2w10 49r8 53r8 57r8 61r8 65r8
+X 11 a-textio.ads
+49K13*Text_IO 451e16 14|1w10 32r19 34r20 38r8 39r8 42r8 43r19 50r8 54r8 58r8
+. 62r8 66r8 74r8 75r18 79r8 82r8
+52P9*File_Type(339R9) 14|32r27 34r28
+53n23*In_File{53E9} 14|43r27
+53n32*Out_File{53E9} 14|75r26
+64I9*Count<integer>
+69I12*Positive_Count{64I9}
+74I12*Field{integer}
+87U14*Create 14|74r16
+88p7 File{52P9} 14|74r23
+89e7 Mode{53E9} 14|75r7
+90s7 Name{string} 14|76r7
+93U14*Open 14|42r16
+94p7 File{52P9} 14|42r21
+95e7 Mode{53E9} 14|43r7
+96s7 Name{string} 14|44r7
+167U14*New_Line 14|39r16 50r16 54r16 58r16 62r16 66r16 82r16
+167i24 Spacing{69I12} 14|39r25
+242U14*Put 14|79r16
+242p19 File{52P9} 14|79r20
+242s37 Item{string} 14|79r38
+243U14*Put 14|38r16
+243s19 Item{string} 14|38r20
+X 12 a-tiflio.ads
+62U14*Put 14|80r22[5|20]
+63p7 File{11|52P9} 14|80r26[5|20]
+64f7 Item{float} 14|80r44[5|20]
+65i7 Fore{11|74I12} 14|80r68[5|20]
+66i7 Aft{11|74I12} 14|80r77[5|20]
+67i7 Exp{11|74I12} 14|80r85[5|20]
+X 13 a-tiinio.ads
+52U14*Get 14|49r24[6|18] 53r24[6|18] 57r24[6|18] 61r24[6|18] 65r24[6|18]
+53p7 File{11|52P9} 14|49r28[6|18] 53r28[6|18] 57r28[6|18] 61r28[6|18] 65r28[6|18]
+54i7 Item{integer} 14|49r45[6|18] 53r45[6|18] 57r45[6|18] 61r45[6|18] 65r45[6|18]
+X 14 filedemo2.adb
+5U11*filedemo2 5b11 84l5 84t14
+19i4 Test1{integer} 49m51 69r17
+20i4 Test2{integer} 53m51 69r25
+21i4 Test3{integer} 57m51 69r33
+22i4 Test4{integer} 61m51 69r41
+23i4 Test5{integer} 65m51 69r49
+26i4 TestTotal{integer} 69m4 70r30
+27i4 NumberOfTests{integer} 70r47
+29f4 AverageTestScore{float} 70m4 80r50
+32p4 InputFile{11|52P9} 42m29 49r34 53r34 57r34 61r34 65r34
+34p4 OutputFile{11|52P9} 74m29 79r26 80r32
+
