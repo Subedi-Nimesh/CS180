@@ -1,0 +1,137 @@
+V "GNAT Lib v2006"
+M P W=b
+A -gnatwu
+A -g
+A -gnato
+A -gnatwa
+A -gnat05
+A -mtune=pentium
+P SS ZX
+R nnnnnnnvnnnnnnnnnvnvvvnnnnnvnnnnnnnnnnvnnnnnnnvnnnnnvvnnnnnnnnnnnnnnnnnn
+
+U tttlab%b		tttlab.adb		689070cf NE SU KM
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.arith_64%s	s-arit64.adb		s-arit64.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.string_ops_concat_5%s  s-sopco5.adb	s-sopco5.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+
+D ada.ads		20060531145010 9c7dd3ea
+D a-calend.ads		20060531145016 4eacf189
+D a-except.ads		20060531145036 7e22d533
+D a-finali.ads		20060531145016 d37ac0e9
+D a-filico.ads		20060531145016 9299732a
+D a-ioexce.ads		20060531145018 be0900a0
+D a-numeri.ads		20060531145018 1cf3e608
+D a-nudira.ads		20060531145018 56734efa
+D a-nudira.adb		20060531145012 cb202240
+D a-stream.ads		20060531145018 34aca5be
+D a-tags.ads		20060531145020 86bbd538
+D a-tags.adb		20060531145014 aa0d61da
+D a-textio.ads		20060531145020 bc58c967
+D interfac.ads		20060531145010 a69cad5c
+D i-cstrea.ads		20060531145024 85085d90
+D system.ads		20060531145036 38d6a6b2
+D s-arit64.ads		20060531145028 ded5f422
+D s-crtl.ads		20060531145028 79229be5
+D s-exctab.ads		20060531145028 e14b1567
+D s-ficobl.ads		20060531145028 ed792749
+D s-finimp.ads		20060531145028 33c39bf7
+D s-finroo.ads		20060531145028 6f410d48
+D s-htable.ads		20060531145028 9598cfa4
+D s-imgint.ads		20060531145028 8222338e
+D s-parame.ads		20060531145028 6bd7b874
+D s-secsta.ads		20060531145028 db466d0c
+D s-soflin.ads		20060531145030 677820d8
+D s-stache.ads		20060531145030 07e06d0a
+D s-stalib.ads		20060531145030 99eda53f
+D s-stoele.ads		20060531145030 f7e9ab3e
+D s-stoele.adb		20060531145026 a397f9ca
+D s-stratt.ads		20060531145030 63715cfd
+D s-strops.ads		20060531145030 92e79914
+D s-sopco3.ads		20060531145030 14cc5bf6
+D s-sopco4.ads		20060531145030 dca7f27b
+D s-sopco5.ads		20060531145030 63c5ad18
+D s-traent.ads		20060531145030 9950c76b
+D s-unstyp.ads		20060531145030 b399198a
+D s-valint.ads		20060531145030 70811f54
+D s-wchcon.ads		20060531145030 a5170e96
+D s-wchstw.ads		20060531145030 6b782940
+D tttlab.adb		20170504163724 82bbf752
+D unchconv.ads		20060531145010 34860a55
+X 1 ada.ads
+16K9*Ada 19e8 42|1r6 2r6 29r30 39r10 63r7 64r7 67r10 69r16 71r16 73r16 76r7
+. 77r7 78r7 79r7 139r7 140r7 158r10 159r10 162r10 163r10 165r10 166r10 168r7
+. 169r4
+X 7 a-numeri.ads
+16K13*Numerics 32e17 42|2r10 29r34
+X 8 a-nudira.ads
+50E9 Result_Subtype 42|30r8
+52k22*Discrete_Random 116e33 42|2w19 29r43
+65R9 Generator 42|32r26[29]
+67V13 Random{integer} 42|42r31[29] 43r31[29]
+67r21 Gen{65R9[42|29]} 42|42r38[29] 43r38[29]
+69U14 Reset 42|141r17[29]
+69r21 Gen{65R9[42|29]} 42|141r23[29]
+X 13 a-textio.ads
+49K13*Text_IO 451e16 42|1w10 39r14 63r11 64r11 67r14 69r20 71r20 73r20 76r11
+. 77r11 78r11 79r11 139r11 140r11 158r14 159r14 162r14 163r14 165r14 166r14
+. 168r11 169r8
+167U14*New_Line 42|64r19 77r19 79r19 140r19 159r22 163r22 166r22 168r19
+243U14*Put 42|39r22 63r19 67r22 69r28 71r28 73r28 76r19 78r19 158r22 162r22
+. 165r22
+243s19 Item{string} 42|39r26 63r23 67r26 69r32 71r32 73r32 76r23 78r23 158r26
+. 162r26 165r26
+264U14*Put_Line 42|139r19 169r16
+265s7 Item{string} 42|139r28 169r25
+X 42 tttlab.adb
+4U11*TTTLab 4b11 170l5 170t11
+12I12 Moverange{natural} 14r28 14r39 18r18 19r21 30r26 36r17 52r18 53r21
+. 65r18 66r19 103r19 121r19
+13E9 TTTValue 13e34 14r53 34r70 83r20 86r29 118r48 132r17 136r20
+13n22 X{13E9} 68r31 88r15 88r23 88r31 143r23 148r26 151r27 157r25
+13n25 O{13E9} 70r35 90r18 90r26 90r34 149r27 161r25
+13n28 Blank{13E9} 20r31 44r40 54r31
+14A9 TTTArray(13E9) 16r31 34r49 50r45 59r38 84r15 97r32 118r31
+16V13 IsFilled{boolean} 16b13 16>23 26l8 26t16 38r10 100r13
+16a23 Board{14A9} 20r15 38r19 100r22
+18i11 row{12I12} 20r21
+19i14 col{12I12} 20r25
+29K12 RandomMove[8|52] 32r15 42r20 43r20 141r6
+32r4 Generator{8|65R9[29]} 42r44 43r44 141r28
+34U14 MakeValidRandomMove 34b14 34=35 34>59 48l8 48t27 147r7
+34a35 Board{14A9} 38r28 44r23 47m7 147r27
+34e59 Player{13E9} 47r24 147r45
+36i7 Row{12I12} 42m13 44r29 47r13
+36i12 Col{12I12} 43m13 44r33 47r17
+50U14 InitializeBoard 50b14 50=31 57l8 57t23 144r6
+50a31 Board{14A9} 54m13 144r22
+52i11 row{12I12} 54r19
+53i14 col{12I12} 54r23
+59U14 DisplayBoard 59b14 59>28 81l8 81t20 154r7
+59a28 Board{14A9} 68r16 70r19 154r20
+65i11 Row{12I12} 68r22 70r26
+66i12 Col{12I12} 68r26 70r30
+83e4 CurrentPlayer{13E9} 143m6 147r55 148r10 149m10 151m10
+84a4 TheBoard{14A9} 144m30 146r29 147m35 154r28 155r37
+86V13 All_Same{boolean} 86b13 86>22 86>24 86>26 95l11 95t19 104r16 106r17
+. 110r10 111r10 122r16 124r17 128r10 129r10
+86e22 R{13E9} 88r13 90r16
+86e24 S{13E9} 88r21 90r24
+86e26 T{13E9} 88r29 90r32
+97V16 Stop{boolean} 97b16 97>21 115l13 115t17 146r14
+97a21 TheBoard{14A9} 100r29 104r26 104r41 104r56 106r26 106r41 106r56 110r19
+. 110r33 110r47 111r19 111r33 111r47 146r19
+103i13 I{12I12} 104r35 104r50 104r65 106r37 106r52 106r67
+118V13 Winner{13E9} 118b13 118>20 134l8 134t14 155r20
+118a20 TheBoard{14A9} 122r26 122r41 122r56 123r20 124r26 124r41 124r56 125r20
+. 128r19 128r33 128r47 129r19 129r33 129r47 130r18 155r27
+121i13 I{12I12} 122r35 122r50 122r65 123r29 124r37 124r52 124r67 125r31
+136e7 Game_Winner{13E9} 155m7 157r13 161r13
+

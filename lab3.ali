@@ -1,0 +1,92 @@
+V "GNAT Lib v2006"
+M P W=b
+A -gnatwu
+A -gnat05
+A -mtune=pentium
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U lab3%b		lab3.adb		4016a209 NE SU IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20060531145010 9c7dd3ea
+D a-except.ads		20060531145036 7e22d533
+D a-finali.ads		20060531145016 d37ac0e9
+D a-filico.ads		20060531145016 9299732a
+D a-flteio.ads		20060531145018 3407344a
+D a-inteio.ads		20060531145018 03bc737c
+D a-ioexce.ads		20060531145018 be0900a0
+D a-stream.ads		20060531145018 34aca5be
+D a-tags.ads		20060531145020 86bbd538
+D a-tags.adb		20060531145014 aa0d61da
+D a-textio.ads		20060531145020 bc58c967
+D a-tiflio.ads		20060531145020 5d91823c
+D a-tiinio.ads		20060531145020 949a7272
+D interfac.ads		20060531145010 a69cad5c
+D i-cstrea.ads		20060531145024 85085d90
+D lab3.adb		20170209183910 cbf52c58
+D system.ads		20060531145036 38d6a6b2
+D s-crtl.ads		20060531145028 79229be5
+D s-exctab.ads		20060531145028 e14b1567
+D s-ficobl.ads		20060531145028 ed792749
+D s-finimp.ads		20060531145028 33c39bf7
+D s-finroo.ads		20060531145028 6f410d48
+D s-htable.ads		20060531145028 9598cfa4
+D s-parame.ads		20060531145028 6bd7b874
+D s-secsta.ads		20060531145028 db466d0c
+D s-soflin.ads		20060531145030 677820d8
+D s-stache.ads		20060531145030 07e06d0a
+D s-stalib.ads		20060531145030 99eda53f
+D s-stoele.ads		20060531145030 f7e9ab3e
+D s-stoele.adb		20060531145026 a397f9ca
+D s-stratt.ads		20060531145030 63715cfd
+D s-traent.ads		20060531145030 9950c76b
+D s-unstyp.ads		20060531145030 b399198a
+D s-wchcon.ads		20060531145030 a5170e96
+D s-wchstw.ads		20060531145030 6b782940
+D unchconv.ads		20060531145010 34860a55
+X 1 ada.ads
+16K9*Ada 19e8 16|1r6 2r6 3r6 34r4 35r4 37r4 38r4 40r4 41r4 43r4 44r4 83r4
+. 84r4 89r4
+X 5 a-flteio.ads
+20K13*Float_Text_IO[12|47] 16|1w10 35r8 38r8 84r8
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[13|47] 16|2w10 41r8
+X 11 a-textio.ads
+49K13*Text_IO 451e16 16|3w10 34r8 37r8 40r8 43r8 44r8 83r8 89r8
+74I12*Field{integer}
+167U14*New_Line 16|89r16
+207U14*Get 16|44r16
+207e19 Item{character} 16|44r21
+243U14*Put 16|34r16 37r16 40r16 43r16 83r16
+243s19 Item{string} 16|34r21 37r21 40r21 43r21 83r21
+X 12 a-tiflio.ads
+58U14*Get 16|35r22[5|20] 38r22[5|20]
+59f7 Item{float} 16|35r27[5|20] 38r27[5|20]
+69U14*Put 16|84r22[5|20]
+70f7 Item{float} 16|85r7[5|20]
+71i7 Fore{11|74I12} 16|86r7[5|20]
+72i7 Aft{11|74I12} 16|87r7[5|20]
+73i7 Exp{11|74I12} 16|88r7[5|20]
+X 13 a-tiinio.ads
+57U14*Get 16|41r24[6|18]
+58i7 Item{integer} 16|41r29[6|18]
+X 16 lab3.adb
+5U11*lab3 5b11 92l5 92t9
+16f4 Full_Time_Hours{float} 48r23 57r47 58r26
+17f4 Overtime_Rate{float} 59r48
+18f4 Wage_Increase{float} 67r27
+19i4 Long_Tenure{integer} 63r24
+20b4 One_Year{boolean} 64m7 69m7
+21i4 Months_Worked{integer} 41m37 63r7
+22f4 Base_Wage{float} 35m35 51r14 58r14 59r36
+23f4 Hours_Worked{float} 38m35 48r7 51r26 57r32
+24f4 Overtime_Hours_Worked{float} 57m7 59r12
+25f4 Pay{float} 51m7 58m7 67m7 67r14 67r21 74m7 74r14 78m7 78r14 85r15
+26e4 Insurance_Type{character} 44m29 73r7 77r8
+27i4 Low_Insurance{integer} 78r26
+28i4 High_Insurance{integer} 74r26
+

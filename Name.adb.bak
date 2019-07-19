@@ -1,0 +1,10 @@
+WITH Ada.Text_IO
+   WITH Ada.Integer_Text_IO
+
+   PROCEDURE Name IS
+       -- My Name And My Age
+   BEGIN
+      Ada.Text_IO.Put (Item =>"Enter your Name" );
+      Ada.Integer_Text_IO.Put (Item =>"Enter your age" );
+   END Name
+

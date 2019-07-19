@@ -1,0 +1,91 @@
+V "GNAT Lib v2006"
+M P W=b
+A -gnatwu
+A -g
+A -gnato
+A -gnatwa
+A -gnat05
+A -mtune=pentium
+P SS ZX
+R nnnnnnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U jumble%b		jumble.adb		bd4b1899 NE SU KU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20060531145010 9c7dd3ea
+D a-except.ads		20060531145036 7e22d533
+D a-finali.ads		20060531145016 d37ac0e9
+D a-filico.ads		20060531145016 9299732a
+D a-inteio.ads		20060531145018 03bc737c
+D a-ioexce.ads		20060531145018 be0900a0
+D a-stream.ads		20060531145018 34aca5be
+D a-tags.ads		20060531145020 86bbd538
+D a-tags.adb		20060531145014 aa0d61da
+D a-textio.ads		20060531145020 bc58c967
+D a-tiinio.ads		20060531145020 949a7272
+D interfac.ads		20060531145010 a69cad5c
+D i-cstrea.ads		20060531145024 85085d90
+D jumble.adb		20170405174408 02afa282
+D system.ads		20060531145036 38d6a6b2
+D s-crtl.ads		20060531145028 79229be5
+D s-exctab.ads		20060531145028 e14b1567
+D s-ficobl.ads		20060531145028 ed792749
+D s-finimp.ads		20060531145028 33c39bf7
+D s-finroo.ads		20060531145028 6f410d48
+D s-htable.ads		20060531145028 9598cfa4
+D s-parame.ads		20060531145028 6bd7b874
+D s-secsta.ads		20060531145028 db466d0c
+D s-soflin.ads		20060531145030 677820d8
+D s-stache.ads		20060531145030 07e06d0a
+D s-stalib.ads		20060531145030 99eda53f
+D s-stoele.ads		20060531145030 f7e9ab3e
+D s-stoele.adb		20060531145026 a397f9ca
+D s-stratt.ads		20060531145030 63715cfd
+D s-traent.ads		20060531145030 9950c76b
+D s-unstyp.ads		20060531145030 b399198a
+D s-wchcon.ads		20060531145030 a5170e96
+D s-wchstw.ads		20060531145030 6b782940
+D unchconv.ads		20060531145010 34860a55
+X 1 ada.ads
+16K9*Ada 19e8 14|1r6 1r19 95r4 96r4 99r4 100r4 136r4
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[11|47] 14|1w23 96r8
+X 10 a-textio.ads
+49K13*Text_IO 451e16 14|1w10 95r8 99r8 100r8 136r8
+74I12*Field{integer}
+243U14*Put 14|95r16 99r16
+250U14*Get_Line 14|100r16
+251s7 Item{string} 14|101r7
+252i7 Last{natural} 14|102r7
+264U14*Put_Line 14|136r16
+X 11 a-tiinio.ads
+67U14*Put 14|96r24[5|18]
+68i7 Item{integer} 14|97r7[5|18]
+69i7 Width{10|74I12} 14|98r7[5|18]
+X 14 jumble.adb
+3U11*Jumble 3b11 138l5 138t11
+17i4 Max_Sentence_Length{integer} 84r28 97r16
+20V13 To_Lower{character} 20b13 21>10 43l8 43t16 124r25
+21e10 Char{character} 37r40
+29i7 Case_Distance{integer} 38r42
+31i7 Upper_Position{integer} 37m7 38r25
+32i7 Lower_Position{integer} 38m7 39r31
+33e7 Lower{character} 39m7 41r14
+45V13 To_Upper{character} 45b13 46>10 63l8 63t16 128r28
+46e10 Char{character} 57r40
+49i7 Case_Distance{integer} 58r42
+51i7 Lower_Position{integer} 57m7 58r25
+52i7 Upper_Position{integer} 58m7 59r31
+53e7 Upper{character} 59m7 61r14
+65V13 Unpunctuate{character} 65b13 66>10 79l8 79t19 130r28
+66e10 Char{character} 70r12 76r21
+68e7 Word{character} 72m13 74m13 76m13 78r14
+84a4 Sentence{string} 101m15 117r23 124m10 128m13 130m13 136r26
+87i4 Sentence_Length{integer} 102m15 106r21 136r40
+89e4 Current_Char{character} 117m7 121r10 121r34 124r34 127r16 127r40 128r37
+. 130r40
+105l4 Change_Char 133l13 133e24
+106i11 I{integer} 117r32 124r19 128r22 130r22
+

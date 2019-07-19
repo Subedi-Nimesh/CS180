@@ -1,0 +1,170 @@
+WITH Ada.Text_IO;
+WITH Ada.Numerics.Discrete_Random;  -- where we get the random generator
+
+Procedure TTTLab Is
+------------------------------------------------------------------------
+--| This program has the beginnings of a program for playing TicTacToe.
+--| Originally written by:  Alan Garvey.
+--| Modified for this lab by: NIMESH SUBEDI and ASHIM GAUTAM UPADHAYA
+--| Date: May 3rd, 2017
+------------------------------------------------------------------------
+
+   Subtype Moverange Is Natural Range 1..3;  -- range of TicTacToe moves
+   Type TTTValue Is (X, O, Blank);     -- possible board position values
+   TYPE TTTArray IS ARRAY (MoveRange, MoveRange) OF TTTValue;
+
+   Function IsFilled (Board : TTTArray) Return Boolean Is
+   Begin
+      For row In MoveRange Loop
+         For col In MoveRange Loop
+           If Board(row,col)= Blank Then
+         RETURN False;   -- Not Filled.
+         END IF;
+         END LOOP;
+      END LOOP;
+      RETURN True;       -- Filled
+   END IsFilled;
+
+   -- Instantiate a package for generating random values of type MoveRange.
+   package RandomMove is new Ada.Numerics.Discrete_Random
+      (Result_Subtype => Moverange);
+   -- Declare the generator to be used to generate random moves.
+   Generator: Randommove.Generator;
+
+   Procedure MakeValidRandomMove (Board: In Out TTTarray; Player: In TTTValue) Is
+   -- Finds an empty board position and puts a piece from Player there.
+      Row, Col: MoveRange;
+   Begin
+      If Isfilled(Board => Board) Then
+         Ada.Text_IO.Put(Item=>"Error Error Error.  Board is full.");
+      Else
+         Loop
+            Row := Randommove.Random(Gen=> Generator);
+            Col := Randommove.Random(Gen=> Generator);
+            Exit When Board(Row,Col) = Blank;
+         End Loop;
+      End If;
+      Board(Row,Col):= Player;
+   End MakeValidRandomMove;
+
+   Procedure InitializeBoard (Board: In Out TTTArray) Is
+   Begin
+      For row In MoveRange Loop
+         For col In MoveRange Loop
+            Board(Row,Col) := Blank;
+         End Loop;
+      End Loop;
+   END InitializeBoard;
+
+   Procedure DisplayBoard (Board: In TTTArray) Is
+
+   BEGIN                                          -- Display Board
+
+      Ada.Text_Io.Put(Item=>" ------------");
+      Ada.Text_Io.New_Line;
+      FOR Row IN MoveRange LOOP
+       For Col In MoveRange Loop
+         Ada.Text_Io.Put(Item=>" |");
+            IF Board(Row,Col)=X THEN
+               Ada.Text_Io.Put(Item=>" X");
+            ELSIF Board (Row,Col)=O THEN
+               Ada.Text_Io.Put(Item=>" O");
+            ELSE
+               Ada.Text_Io.Put(Item=>"  ");
+            END IF;
+         END LOOP;
+      Ada.Text_Io.Put(Item=>"|");
+      Ada.Text_Io.New_Line;
+      Ada.Text_Io.Put(Item=>" ------------");
+      Ada.Text_Io.New_Line;
+      END LOOP;
+   End DisplayBoard;
+
+   CurrentPlayer : TTTValue;
+   TheBoard : TTTArray;
+
+   Function All_Same(R,S,T: TTTValue) Return Boolean Is
+      Begin
+         IF R=X and S=X and T=X Then
+            RETURN True;
+         ELSIF R=O AND S=O AND T=O THEN
+            RETURN True;
+         ELSE
+            RETURN False;
+         END IF;
+      END All_Same;
+
+      FUNCTION Stop(TheBoard : TTTArray) RETURN Boolean IS
+
+      BEGIN -- Find_Winner
+         IF Isfilled(Board=>TheBoard) THEN
+            RETURN True;
+         End If;
+        For I In  MoveRange Loop
+         If    All_Same (TheBoard(I,1), TheBoard(I,2), TheBoard(I,3)) Then
+            Return True;
+         Elsif  All_Same(TheBoard(1,I), TheBoard(2,I), TheBoard(3,I)) Then
+            Return True;
+         End if;
+      End Loop;
+      If All_Same(TheBoard(1,1),TheBoard(2,2),TheBoard(3,3)) Or
+         All_Same(TheBoard(3,1),TheBoard(2,2),TheBoard(1,3)) Then
+              RETURN  True;
+         END IF;
+           RETURN False;
+        END Stop;
+
+
+   Function Winner(TheBoard : TTTArray) Return TTTValue Is
+
+      Begin -- Finding Winner
+        For I In  MoveRange Loop
+         If    All_Same (TheBoard(I,1), TheBoard(I,2), TheBoard(I,3)) Then
+            Return TheBoard(I,1);
+         Elsif  All_Same(TheBoard(1,I), TheBoard(2,I), TheBoard(3,I)) Then
+            Return TheBoard(1,I);
+         End if;
+      End Loop;
+      If All_Same(TheBoard(1,1),TheBoard(2,2),TheBoard(3,3)) Or
+         All_Same(TheBoard(3,1),TheBoard(2,2),TheBoard(1,3)) Then
+         Return  TheBoard(2,2);
+         END IF;
+         Return TTTValue'Val (2);
+
+   End Winner;
+
+      Game_Winner: TTTValue;
+
+   Begin -- TTTLab
+      Ada.Text_Io.Put_Line(Item=>"Welcome to the TicTacToe Program.");
+      Ada.Text_Io.New_Line;
+     RandomMove.Reset(Gen=>Generator);
+
+     CurrentPlayer := X;
+     InitializeBoard(Board=> TheBoard);
+
+   While Not Stop(TheBoard=>TheBoard) Loop
+      MakeValidRandomMove(Board=> TheBoard, Player => CurrentPlayer);
+      If CurrentPlayer = X Then
+         CurrentPlayer := O;
+      Else
+         CurrentPlayer := X;
+      End If;
+   End Loop;
+      DisplayBoard(Board=> TheBoard);
+      Game_Winner:=Winner(TheBoard=>TheBoard);
+      IF
+            Game_Winner=X THEN
+         Ada.Text_Io.Put(Item=>" The Winner is X" );
+         Ada.Text_Io.New_Line;
+      ELSIF
+            Game_Winner=O THEN
+         Ada.Text_Io.Put(Item=> " The Winner is O" );
+         Ada.Text_Io.New_Line;
+      ELSE
+         Ada.Text_Io.Put(Item=> " It is a Tie." );
+         Ada.Text_Io.New_Line;
+      END IF;
+      Ada.Text_Io.New_Line;
+   Ada.Text_io.Put_Line(Item => "Thank you for using the program.  Good-bye.");
+end TTTLab;

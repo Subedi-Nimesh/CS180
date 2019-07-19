@@ -1,0 +1,23 @@
+WITH Ada.Text_Io;
+WITH Ada.Integer_Text_Io;
+
+--Progarm to demonstrate constant and variable declaration.
+PROCEDURE Jan23 IS
+   Pi              : CONSTANT Float   := 3.14159;
+   MaxStudentCount : CONSTANT Integer := 30;
+   Errormassage    :          String  := "Error Detected";
+   StudentCount    :          Integer;
+   Hours           :          Float;
+
+BEGIN
+   Ada.Text_Io.Put(Item => "welcome to my program.");
+   Ada.Text_Io.New_Line;
+   Ada.Integer_Text_Io.Put(Item => Maxstudentcount);
+   Ada.Text_Io.New_Line;
+   StudentCount := 23;
+   Ada.Text_Io.Put(Item => "Studentcount is; ");
+   Ada.Integer_Text_Io.Put(Item => StudentCount);
+   StudentCount := StudentCount + 1;
+END Jan23;
+
+
